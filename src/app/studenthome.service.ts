@@ -7,9 +7,9 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class StudenthomeService {
   constructor(private myhttp:HttpClient) { }
-  restURL:string="http://localhost:8989/Home"
-  ShowDetails(Email:String)
+  restURL:string="http://localhost:8989/"
+  ShowDetails(email:String)
   {
-    return this.myhttp.get(this.restURL+"/StudentHome/${email}");
+    return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);
   }
 }

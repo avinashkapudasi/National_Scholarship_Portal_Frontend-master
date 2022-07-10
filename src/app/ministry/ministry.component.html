@@ -2,15 +2,15 @@
     <div class="row">
     <div class="shadow p-3 mb-5 bg-body rounded">
         <div class="row">
-            <h2>ADMIN LOGIN</h2>
-            <form class="row g-3" [formGroup]="form" (ngSubmit)="login()">
+            <h2>Ministry LOGIN</h2>
+            <form class="row g-3" [formGroup]="form" (ngSubmit)="checkLogin()">
                 <div class="col-4">
-                    <label for="inputEmail" class="form-label">Registered Email</label>
-                    <input type="text" formControlname="admin" class="form-control" Email="admin" name="admin" placeholder="" >
+                    <label for="ministryId" class="form-label">Ministry ID:</label>
+                    <input type="text" formControlname="ministryId" [(ngModel)]="ministryId" class="form-control" name="ministryId" placeholder="" >
                 </div>
                 <div class="col-4">
                     <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" formControlname="password" class="form-control" pass="password" name="password" placeholder="" >
+                    <input type="password" formControlname="password" [(ngModel)]="password" class="form-control" name="password" placeholder="" >
                 </div>
                 <div class="col-12">
                     <button type="submit" class="login-btn btn btn-success" value="login">Login</button>

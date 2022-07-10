@@ -1,7 +1,7 @@
 <button class="btn btn-dark">STUDENT HOME</button>
 <div class="shadow p-3 mb-5 bg-body rounded">
  
-<h2>Welcome {{logedin}}</h2>
+<h2>Welcome {{username}}</h2>
 <style>
     h2 {
       text-align: center;
@@ -11,44 +11,33 @@
     <table style="width:100%">
         <tr >
           <th> Name:</th>
-          <td>{{UserData.name}}</td>
+          <td>{{studentData.name}}</td>
           </tr>
           <tr>
           <th>Email:</th>
-          <td>{{logedin}}</td>
+          <td>{{username}}</td>
         </tr>
         <tr>
-            <th>10th Percentage:</th>
-            <td>{{UserData.tenthper}}</td>
+            <th>Aadhar Number:</th>
+            <td>{{studentData.aadharNumber}}</td>
             </tr>
         <tr>
-            <th>12th Percentage:</th>
-            <td>{{UserData.twelper}}</td>
+            <th>Gender:</th>
+            <td>{{studentData.gender}}</td>
             </tr>
       </table>
     
 </div>
-  <style>th {
-        text-align: left;
-      }
-      table, th, td {
-      border: 1px solid white;
-      border-collapse: collapse;
-    }
-    th, td {
-      background-color: #96D4D4;
-    }</style>
-    
+  
     <div class="table1">
-    <h2>Eligible Scholarship</h2> 
     <table style="width:100%">
         <tr>
-         <th>Eligible Scholarships</th>
          <th>Apply for Scholarship</th>
+         <td><button type="button"  class="btn btn-primary" routerLink="/scholarshipapplication">Apply</button>    
         </tr>
-        <td>{{UserData.Fixscheme}}</td>
-        <td><button type="button"  class="btn btn-primary" routerLink="/scholarshipapplication">Apply</button>
+        
      </table>
     </div>
     <h2>Scholarship Status</h2>
+    <h3>{{studentData.status}}</h3>
 </div>

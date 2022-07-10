@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ministry } from './ministry';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,11 @@ export class AuthenticationService {
   login(student:any):Observable<any>
   {
     return this.http.post("http://localhost:8989/loginstudent",student);
+  }
+
+  ministrylogin(Ministry:any):Observable<any>
+  {
+    return this.http.post("http://localhost:8989/loginministry",ministry);
   }
 
   isUserLoggedIn() {

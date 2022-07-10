@@ -43,7 +43,7 @@
         
         <div class="col-md-4">
             <label for="inputInstitutionName" class="form-label">INSTITUTION NAME</label>
-            <input type="text" name="institution" id="institution" class="form-control" ngModel>
+            <input type="text" name="institution" class="form-control" id="institution" ngModel>
         </div>
         <div class="col-4">
             <label for="inputPresentClass" class="form-label">Present Class</label>
@@ -171,12 +171,12 @@
           <label for="inputState" class="form-label">STATE</label>
           <select id="inputState" name="state" class="form-select" id="state" ngModel>
             <option selected>select your state</option>
-            <option value="1" name="state">Telangana</option>
-            <option value="2" name="state">Andhra Pradesh</option>
-            <option value="3" name="state">Maharashtra</option>
-            <option value="4" name="state">Kerala</option>
-            <option value="5" name="state">MadhyaPradesh</option>
-            <option value="6" name="state">Punjab</option>
+            <option value="Telangana" name="state">Telangana</option>
+            <option value="AndhraPradesh" name="state">Andhra Pradesh</option>
+            <option value="Maharashtra" name="state">Maharashtra</option>
+            <option value="Kerala" name="state">Kerala</option>
+            <option value="MadhyaPradesh" name="state">MadhyaPradesh</option>
+            <option value="Punjab" name="state">Punjab</option>
           </select>
         </div>
         <div class="col-6">
@@ -184,8 +184,8 @@
           <input type="text" name="district" class="form-control" id="district" placeholder="Please enter your district" ngModel>
         </div>
         <div class="col-6">
-          <label for="inputTaluk" class="form-label">TALUK</label>
-          <input type="text" name="taluk" class="form-control" id="taluk" placeholder="Please enter your Taluk / Landmark" ngModel>
+          <label for="inputTaluk" class="form-label">TALUK/Mandal</label>
+          <input type="text" name="taluk" class="form-control" id="taluk" placeholder="Please enter your Taluk / Mandal" ngModel>
         </div>
         <div class="col-6">
           <label for="inputHno" class="form-label">HOUSE NUMBER</label>
@@ -223,10 +223,12 @@
             <ul>
             <li>Merit Based Scholarship has National Talent Search Examination , which should be attempted.</li></ul>
           </div>
-          <div class="col-6">
+          <!--
+            <div class="col-6">
              <label for="inputDocument" class="form-label">UPLOAD DOCUMENTS</label>
              <input type="file" id="document" class="form-control">
           </div>
+        -->
           <div class="col-12">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>

@@ -1,7 +1,7 @@
-import { Admin } from './admin';
+import { Ministry } from './ministry';
 
-describe('Admin', () => {
+describe('Ministry', () => {
   it('should create an instance', () => {
-    expect(new Admin()).toBeTruthy();
+    expect(new Ministry()).toBeTruthy();
   });
 });
