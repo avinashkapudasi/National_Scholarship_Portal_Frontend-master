@@ -2,14 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { student } from '../student';
+import { nodal } from '../nodal'
+
 @Component({
-  selector: 'app-studentlogin',
-  templateUrl: './studentlogin.component.html',
-  styleUrls: ['./studentlogin.component.css']
+  selector: 'app-nodalofficer',
+  templateUrl: './nodalofficer.component.html',
+  styleUrls: ['./nodalofficer.component.css']
 })
-export class StudentloginComponent implements OnInit {
-  email = ''
+export class NodalofficerComponent implements OnInit {
+
+  nodalId = ''
   password = ''
   invalidLogin = false
   errorMessage = 'Invalid Credentials';
@@ -20,28 +22,30 @@ export class StudentloginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   form=new FormGroup({
-    'email':new FormControl('',Validators.compose([Validators.email, Validators.required])),
+    'nodalId':new FormControl('',Validators.compose([Validators.required])),
     'password':new FormControl('',Validators.required),
   })
-  student:student=new student();
+
+  nodal:nodal=new nodal();
   checkLogin() {
-      this.student=this.form.value;
+      this.nodal=this.form.value;
       console.log(this.form.value)
-      console.log(this.student)
-    let student={
-      "email":this.email,
+      console.log(this.nodal)
+    let nodal={
+      "nodalId":this.nodalId,
       "password":this.password
     }
 
-    this.loginService.login(student).subscribe((response) => {
+    this.loginService.nodallogin(nodal).subscribe((response) => {
       console.log(response);
       if(response)
       {
-        sessionStorage.setItem('email', this.email)
+        sessionStorage.setItem('nodalId', this.nodalId)
         this.invalidLogin = false;
         this.loginSuccess = true;
-        this.router.navigate(['/studenthome']);
+        this.router.navigate(['/nodalhome']);
         this.successMessage = 'Login Successful.';
       }
       else{
@@ -51,4 +55,5 @@ export class StudentloginComponent implements OnInit {
  
     this.loginSuccess = false;
   }
+
 }

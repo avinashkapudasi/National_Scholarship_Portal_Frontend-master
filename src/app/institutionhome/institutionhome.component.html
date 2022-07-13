@@ -1,1 +1,32 @@
-<p>institutionhome works!</p>
+<button class="btn btn-dark">INSTITUTION HOME</button>
+<div class="shadow p-3 mb-5 bg-body rounded">
+ 
+<h2>Welcome {{institutionCode}}</h2>
+<style>
+    h2 {
+      text-align: center;
+    }
+</style>
+<div class="table1">
+    <table style="width:100%">
+        <tr >
+          <th> Name:</th>
+          <td>{{instituteData.name}}</td>
+          </tr>
+          <tr>
+          <th>Institute Code</th>
+          <td>{{institutionCode}}</td>
+        </tr>
+        <tr>
+            <th>Institute Location</th>
+            <td>{{instituteData.state}},{{instituteData.district}},{{instituteData.pincode}}</td>
+            </tr>
+        <tr>
+            <th>Principle Name</th>
+            <td>{{instituteData.principleName}}</td>
+            </tr>
+      </table>
+    
+    </div>
+
+</div>

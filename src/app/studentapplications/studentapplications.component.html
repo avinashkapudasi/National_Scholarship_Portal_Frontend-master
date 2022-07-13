@@ -1,0 +1,39 @@
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 align="center" >STUDENT APPLICATIONS LIST</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Gender</th>
+            <th>Student State</th>
+            <th>Student Email</th>
+            <th>College Name</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let application of Studentapplication | async">
+            <td>{{ application.aadhar }}</td>
+            <td>{{ application.name }}</td>
+            <td>{{ application.gender }}</td>
+            <td>{{ application.state }}</td>
+            <td>{{ application.email }}</td>
+            <td>{{ application.institution }}</td>
+            
+            <td>
+                
+              <button class="btn btn-success" style="margin-left: 10px">APPROVE</button>
+
+              <button class="btn btn-danger" style="margin-left: 30px">DENY</button>
+            </td>
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

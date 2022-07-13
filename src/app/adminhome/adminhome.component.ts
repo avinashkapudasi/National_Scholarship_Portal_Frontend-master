@@ -11,7 +11,7 @@ export class AdminhomeComponent implements OnInit {
 
   ngOnInit(): void 
   {
-    this.logedin=sessionStorage.getItem("adminlogedIn");
+    this.logedin=sessionStorage.getItem("email");
   }
 
 }

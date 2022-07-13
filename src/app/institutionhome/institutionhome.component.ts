@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { InstitutionhomeService } from '../institutionhome.service';
 
 @Component({
   selector: 'app-institutionhome',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstitutionhomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private stu:InstitutionhomeService,private myRouter:Router) { }
+  institutionCode:any;
+  instituteData:any;
 
   ngOnInit(): void {
+    this.institutionCode=sessionStorage.getItem("institutionCode");
+    this.stu.ShowDetails(this.institutionCode).subscribe(
+      (data)=>{
+        console.log(data);
+        this.instituteData=data;
+      },
+      (error)=>
+      {
+        console.log(error);
+      }
+    )
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../authentication.service';
 import { Institution } from '../institution';
 import { InstitutionloginService } from '../institutionlogin.service';
 
@@ -10,30 +11,49 @@ import { InstitutionloginService } from '../institutionlogin.service';
   styleUrls: ['./institutionlogin.component.css']
 })
 export class InstitutionloginComponent implements OnInit {
+  email = ''
+  password = ''
+  invalidLogin = false
+  errorMessage = 'Invalid Credentials';
+  successMessage: string |any;
+  loginSuccess = false;
 
-  constructor(private add:InstitutionloginService,private myrouter:Router) { }
+  constructor(private router:Router,private loginService:AuthenticationService) { }
 
   ngOnInit(): void {}
-  user:any;
-  Institution: Institution=new Institution();
-  loginValues:any;
-  loginpass:any;
-  loginValid:any;
+  
   
   form=new FormGroup({
-    'loginid':new FormControl('',Validators.required),
+    'email':new FormControl('',Validators.required),
     'password':new FormControl('',Validators.required)
-  });
-  login()
+  })
+  institute:Institution=new Institution();
+  checkLogin()
   {
-      console.log(this.form.value);
-      this.add.login(this.form.value).subscribe(data=>{
-        let res=data;
-          if(res.status==200)
-          {
-            this.myrouter.navigate(['/institutionhome']);
-          }
-      })
+    this.institute=this.form.value;
+      console.log(this.form.value)
+      console.log(this.institute)
+    let student={
+      "email":this.email,
+      "password":this.password
+    }
+
+    this.loginService.institutelogin(student).subscribe((response) => {
+      console.log(response);
+      if(response)
+      {
+        sessionStorage.setItem('email', this.email)
+        this.invalidLogin = false;
+        this.loginSuccess = true;
+        this.router.navigate(['/institutionhome']);
+        this.successMessage = 'Login Successful.';
+      }
+      else{
+        this.invalidLogin = true
+      }
+    });
+ 
+    this.loginSuccess = false;
       
   }
 

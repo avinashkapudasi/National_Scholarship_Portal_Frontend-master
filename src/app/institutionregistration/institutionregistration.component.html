@@ -4,7 +4,7 @@
 <form class="row" [formGroup]="form" (ngSubmit)="saveInstitution()">
     
      <div class="col-md-10">
-         <h3>BASIC DETAILS</h3><br>
+         <h3>INSTITUTE DETAILS</h3><br>
          <div class="col-md-4">
             <label for="inputInstitutionCategory" class="form-label">INSTITUTION CATEGORY</label>
             <select formControlName="institutionCategory" id="inputInstitutionCategory" class="form-select" id="institioncategory">
@@ -91,11 +91,11 @@
         </div>
         <div class="col-md-8">
             <label for="inputSetPassword" class="form-label">Set Password</label>
-            <input formControlName="setPassword" type="text" class="form-control" id="setpassword" placeholder="">
+            <input formControlName="password" type="text" class="form-control" id="password" placeholder="">
         </div>
         <div class="col-md-8">
             <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
-            <input formControlName="confirmPassword" type="text" id="confirmpassword" class="form-control" placeholder="">
+            <input formControlName="password" type="text" id="password" class="form-control" placeholder="">
           </div>
         <label for="input" class="form-label">PROOF OF EXSISTANCE OF INSTITUTION :</label>
         <div class="col-md-6">

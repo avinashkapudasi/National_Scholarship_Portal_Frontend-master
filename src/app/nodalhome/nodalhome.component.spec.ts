@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminloginComponent } from './adminlogin.component';
+import { NodalhomeComponent } from './nodalhome.component';
 
-describe('AdminloginComponent', () => {
-  let component: AdminloginComponent;
-  let fixture: ComponentFixture<AdminloginComponent>;
+describe('NodalhomeComponent', () => {
+  let component: NodalhomeComponent;
+  let fixture: ComponentFixture<NodalhomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminloginComponent ]
+      declarations: [ NodalhomeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminloginComponent);
+    fixture = TestBed.createComponent(NodalhomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

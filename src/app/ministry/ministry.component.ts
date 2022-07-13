@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { student } from '../student';
+import { ministry } from '../ministry';
 @Component({
-  selector: 'app-studentlogin',
-  templateUrl: './studentlogin.component.html',
-  styleUrls: ['./studentlogin.component.css']
+  selector: 'app-ministry',
+  templateUrl: './ministry.component.html',
+  styleUrls: ['./ministry.component.css']
 })
-export class StudentloginComponent implements OnInit {
-  email = ''
+export class MinistryComponent implements OnInit {
+  ministryId = ''
   password = ''
   invalidLogin = false
   errorMessage = 'Invalid Credentials';
@@ -21,27 +21,26 @@ export class StudentloginComponent implements OnInit {
   ngOnInit(): void {
   }
   form=new FormGroup({
-    'email':new FormControl('',Validators.compose([Validators.email, Validators.required])),
+    'ministryId':new FormControl('',Validators.required),
     'password':new FormControl('',Validators.required),
   })
-  student:student=new student();
+  ministry:ministry=new ministry();
   checkLogin() {
-      this.student=this.form.value;
+      this.ministry=this.form.value;
       console.log(this.form.value)
-      console.log(this.student)
-    let student={
-      "email":this.email,
+      console.log(this.ministry)
+    let ministry={
+      "ministryId":this.ministryId,
       "password":this.password
     }
-
-    this.loginService.login(student).subscribe((response) => {
+    this.loginService.ministrylogin(ministry).subscribe((response) => {
       console.log(response);
       if(response)
       {
-        sessionStorage.setItem('email', this.email)
+        sessionStorage.setItem('ministryId', this.ministryId)
         this.invalidLogin = false;
         this.loginSuccess = true;
-        this.router.navigate(['/studenthome']);
+        this.router.navigate(['/ministryhome']);
         this.successMessage = 'Login Successful.';
       }
       else{

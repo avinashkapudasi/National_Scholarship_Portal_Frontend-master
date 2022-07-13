@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BasicDetails } from './scholarshipapplicationdetails';
+import { applicationDetails } from './scholarshipapplicationdetails';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,11 @@ export class ScholarshipapplicationService {
   constructor(private myhttp:HttpClient) { }
   restUrl:string="http://localhost:8989";
 
-  getBasicDetails(){
-    return this.myhttp.get(this.restUrl+"/AllBasicDetails")
+  getStudent(){
+    return this.myhttp.get(this.restUrl+"/student")
   }
 
-  addBasicDetails(add:BasicDetails){
-    return this.myhttp.post(this.restUrl+"/scholarshipapplicalionDetails",add)
+  addStudent(add:applicationDetails){
+    return this.myhttp.post(this.restUrl+"/applystudent",add)
   }
 }

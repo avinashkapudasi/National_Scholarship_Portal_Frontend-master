@@ -1,6 +1,6 @@
 export class student 
 {
-	Email:String | undefined;
+	email:String | undefined;
     password:string | undefined;
     name:String|undefined;
     tenper:number| undefined;
@@ -8,10 +8,9 @@ export class student
     scheme:String|undefined;
     girlscheme:String|undefined;
 	AadharNumber:number|undefined;
-	StateofDomicile:String|undefined;
-	Name:String|undefined;
-	Gender:String|undefined;
-	MobileNumber:number|undefined;
-	InstitutionCode:String|undefined;
+	stateofDomicile:String|undefined;
+	gender:String|undefined;
+	mobileNumber:number|undefined;
+	institutionCode:String|undefined;
 	confirmPassword:String|undefined;	
 }
