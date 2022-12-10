@@ -2,6 +2,12 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
 img
 {
     height: 150px;

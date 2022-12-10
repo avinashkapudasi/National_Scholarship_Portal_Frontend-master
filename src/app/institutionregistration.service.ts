@@ -12,10 +12,10 @@ export class InstitutionregistrationService {
 restURL:string="http://localhost:8989";
 getInstitution()
 {
-  return this.myhttp.get(this.restURL+"/institution-registration")
+  return this.myhttp.get(this.restURL+"/instituteregistration")
 }
 addInstitution(add:Institution)
 {
-  return this.myhttp.post(this.restURL+"/institution-registration",add)
+  return this.myhttp.post(this.restURL+"/instituteregistration",add)
 }
 }

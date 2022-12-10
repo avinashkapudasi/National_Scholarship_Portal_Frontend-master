@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScholarshipapplicationService } from '../scholarshipapplication.service';
-import { BasicDetails } from '../scholarshipapplicationdetails';
+import { applicationDetails } from '../scholarshipapplicationdetails';
 
 
 @Component({
@@ -16,22 +16,22 @@ export class ScholarapplicationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  basicDetails:BasicDetails = new BasicDetails();
+  Details:applicationDetails = new applicationDetails();
 
    savescholarshipDetails(basicDetailsForm:any){
-    this.basicDetails=basicDetailsForm.value;
+    this.Details=basicDetailsForm.value;
     console.log(basicDetailsForm.value);
-    console.log(this.basicDetails);
-    this.bas.addBasicDetails(this.basicDetails).subscribe(
+    console.log(this.Details);
+    alert("registrationdone");
+    this.myrouter.navigate(['/studenthome']);
+    this.bas.addStudent(this.Details).subscribe(
       (data)=>{
         console.log(data);
         console.log("Persisted");
-        alert("Registration done")
       },
       (error)=>{
          console.log(error)
       }
       )
    }
-
 }

@@ -4,7 +4,7 @@
 <form class="row" [formGroup]="form" (ngSubmit)="saveInstitution()">
     
      <div class="col-md-10">
-         <h3>BASIC DETAILS</h3><br>
+         <h3>INSTITUTE DETAILS</h3><br>
          <div class="col-md-4">
             <label for="inputInstitutionCategory" class="form-label">INSTITUTION CATEGORY</label>
             <select formControlName="institutionCategory" id="inputInstitutionCategory" class="form-select" id="institioncategory">
@@ -24,7 +24,7 @@
         <label for="inputState" class="form-label">STATE</label>
         <select formControlName="inststate" id="inputInstitutionCategory" class="form-select" id="state">
           <option selected>select state</option>
-          <option>Andra Pradesh </option>
+          <option>AndHra Pradesh </option>
           <option>Kerala </option>
           <option>Maharashtra</option>
           <option>West Bengal</option>
@@ -37,17 +37,17 @@
         </div>
         <div class="col-md-4">
             <label for="inputIstituteCode" class="form-label"> INSTITUTE CODE</label>
-            <input formControlName="institutionCode" type="text" class="form-control" id="institutecode" placeholder="">
+            <input formControlName="institutionCode" type="text" class="form-control" id="institutionCode" placeholder="">
         </div>
         <div class="col-md-4">
             <label for="inputDISECode" class="form-label">DISE CODE</label>
-            <input formControlName="disecode" type="text" class="form-control" id="DISEcode" placeholder="">
+            <input formControlName="diseCode" type="text" class="form-control" id="diseCode" placeholder="">
         </div>
         <div  class="row">
             <label for="inputLocation" class="form-label">LOCATION :</label>
             <div class="form-check">
                 <input formControlName="location" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">RURLA</label>
+                <label class="form-check-label" for="flexRadioDefault1">RURAL</label>
             </div>
             <div>
                 <input formControlName="location" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
@@ -91,11 +91,11 @@
         </div>
         <div class="col-md-8">
             <label for="inputSetPassword" class="form-label">Set Password</label>
-            <input formControlName="setPassword" type="text" class="form-control" id="setpassword" placeholder="">
+            <input formControlName="password" type="text" class="form-control" id="password" placeholder="">
         </div>
         <div class="col-md-8">
             <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
-            <input formControlName="confirmPassword" type="text" id="confirmpassword" class="form-control" placeholder="">
+            <input formControlName="password" type="text" id="password" class="form-control" placeholder="">
           </div>
         <label for="input" class="form-label">PROOF OF EXSISTANCE OF INSTITUTION :</label>
         <div class="col-md-6">
@@ -131,22 +131,22 @@
             <div> <label for="inputDistrict" class="form-label">DISTRICT :</label>
                 <input formControlName="district" type="text" class="form-control" id="DISTRICT" placeholder="">
             </div>
-            <div> <label for="inputPinCode" class="form-label">PINE CODE :</label>
+            <div> <label for="inputPinCode" class="form-label">PIN CODE :</label>
                 <input formControlName="pincode" type="number" class="form-control" id="pincode" placeholder="">
             </div>
             <label for="input" class="form-label">CONTACT DETAILS:</label>
             <div class="col-md-8">
                 <label for="inputPrincipalName" class="form-label">PRINCIPAL NAME :</label>
-                <input formControlName="principleName" type="text" class="form-control" id="line1" placeholder="">
+                <input formControlName="principleName" type="text" class="form-control" id="line1" placeholder="" required>
             </div>
             <div> <label for="inputMobileNumber" class="form-label">MOBILE NUMBER :</label>
-                <input formControlName="mobileNumber" type="number" class="form-control" id="line2" placeholder="">
+                <input formControlName="mobileNumber" type="number" class="form-control" id="line2" placeholder="" required>
             </div>
             <div> <label for="inputTelephone" class="form-label">TELEPHONE :</label>
-                <input formControlName="telephone" type="number" class="form-control" id="telephone" placeholder="">
+                <input formControlName="telephone" type="number" class="form-control" id="telephone" placeholder="" required>
             </div>
             <div class="form-check" class="col-md-10">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required>
                 <label class="form-check-label" for="flexCheckChecked" >
                   ALL THE DETAILS AND DOCUMENTS SUBMITTED BY US ARE VALID AND TRUE.
                   IF FOUND GUILTY OF SUBMITTING INVALID DOCUMENTS, WE MAY BE HELD RESPONSIBLE FOR THAT ACT BY US.

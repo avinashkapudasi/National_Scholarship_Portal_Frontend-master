@@ -5,9 +5,8 @@ import { AppComponent } from './app.component';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
 import { InstitutionregistrationComponent } from './institutionregistration/institutionregistration.component';
@@ -16,14 +15,23 @@ import { InstitutionhomeComponent } from './institutionhome/institutionhome.comp
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DisplayComponent } from './display/display.component';
-import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component'
+import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component';
+import { StudentapplicationsComponent } from './studentapplications/studentapplications.component';
+import { MinistryComponent } from './ministry/ministry.component';
+import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
+import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
+import { InstituteapplicationsComponent } from './instituteapplications/instituteapplications.component'
+import { NodalhomeComponent } from './nodalhome/nodalhome.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { StudentapplicationministryComponent } from './studentapplicationministry/studentapplicationministry.component';
+import { InstitutefinalapprovalComponent } from './institutefinalapproval/institutefinalapproval.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     StudentloginComponent,
     StudenthomeComponent,
     HomeComponent,
-    AdminloginComponent,
     AdminhomeComponent,
     StudentregistrationComponent,
     InstitutionregistrationComponent,
@@ -33,6 +41,15 @@ import { ScholarapplicationComponent } from './scholarapplication/scholarapplica
     AboutComponent,
     DisplayComponent,
     ScholarapplicationComponent,
+    StudentapplicationsComponent,
+    MinistryComponent,
+    NodalofficerComponent,
+    MinistryhomeComponent,
+    InstituteapplicationsComponent,
+    NodalhomeComponent,
+    PagenotfoundComponent,
+    StudentapplicationministryComponent,
+    InstitutefinalapprovalComponent
   ],
   imports: [
     BrowserModule,

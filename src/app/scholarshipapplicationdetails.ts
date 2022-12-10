@@ -1,6 +1,6 @@
-export class BasicDetails {
+export class applicationDetails {
     loginid:any|undefined;
-    aadharno:any|undefined;
+    aadhar:any|undefined;
     religion:string|undefined;
     community:string|undefined;
     fatherName:string|undefined;

@@ -41,65 +41,12 @@ export class StudentloginComponent implements OnInit {
         sessionStorage.setItem('email', this.email)
         this.invalidLogin = false;
         this.loginSuccess = true;
-        this.router.navigate(['']);
+        this.router.navigate(['/studenthome']);
         this.successMessage = 'Login Successful.';
       }
-      else{
-        this.invalidLogin = true
-      }
+      
     });
- 
+    this.invalidLogin = true;
     this.loginSuccess = false;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*
-  constructor(private add:StudentloginService,private myRouter:Router) { }
-
-  ngOnInit(): void {
-  }
-  user:any;
-  Student:Student=new Student();
-  loginValues:any;
-  loginpass:any;
-  loginValid:any;
-  form=new FormGroup({
-    'email':new FormControl('',Validators.required),
-    'password':new FormControl('',Validators.required)
-  });
-  login()
-  {
-      console.log(this.form.value);
-      this.add.login(this.form.value).subscribe(data=>{
-        let res=data;
-          if(res.status==200)
-          {
-            sessionStorage.setItem("userlogedIn",this.form.value.Email);
-            this.myRouter.navigate(['/studenthome']);
-          }
-      })
-  }*/
 }
